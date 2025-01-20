@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodle Baseline Checklist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">
+        
+        
+        <div class="container">            
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <h3 id="completion-percentage" class="me-3">Moodle Baseline Completion Checker: 0%</h3>
+                <button type="button" id="reset-button" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <p>👉 This page does not save your progress. 
+        <br>👉 All checked boxes will be reset if you refresh the page.</p></div>
+    <div class="container mt-5">
+        <form>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Remark</th>
+                            <th>Official Moodle Baseline</th>
+                            <th>Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Welcome Message</td>
+                            <td>Have you provided a welcome message for students that includes the information provided in the Moodle Good Practice Exemplar Space?</td>
+                            <td><input type="checkbox" name="welcome_message" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>2. Moodle Usage Instructions</td>
+                            <td>Have you provided clear instructions on how Moodle will be used to support teaching, learning, and assessment, including how students will be expected to engage with it and include programme links?</td>
+                            <td><input type="checkbox" name="moodle_usage" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>3. Learning Resources Signposting</td>
+                            <td>Are learning resources clearly signposted (using text and media)? Plus, have you provided a description of how students should engage with each of the learning materials?</td>
+                            <td><input type="checkbox" name="learning_resources" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>4. Consistent Topic & Section Headings</td>
+                            <td>Are weekly topics and section headings named consistently and meaningfully using built-in headings and structures?</td>
+                            <td><input type="checkbox" name="consistent_topic" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5. Academic and Technical Support Information</td>
+                            <td>Have you provided clear information about who to speak with for academic and technical issues?</td>
+                            <td><input type="checkbox" name="academic_support" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>6. General Module Information</td>
+                            <td>Have you provided general module information, including marking criteria, contact information, and availability of staff delivering the module?</td>
+                            <td><input type="checkbox" name="module_info" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>7. Assessment Submission Details</td>
+                            <td>Are summative assessment submission details, including method of submission and dates in Moodle activities and formal assignment briefs, consistent with information in the Assessment Block in the right-hand column? Formative and summative assessment requirements clearly communicated to students.</td>
+                            <td><input type="checkbox" name="assessment_details" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>8. AI Usage Expectations</td>
+                            <td>Have you included clear expectations on the use of AI in your module? Clearly provided on the module page and assessment brief.</td>
+                            <td><input type="checkbox" name="ai_usage" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>9. Materials for Outside Learning Activities</td>
+                            <td>Have you provided materials to support learning activities outside of the taught face-to-face environment?</td>
+                            <td><input type="checkbox" name="outside_learning" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>10. Up-to-date Reading & Resource List</td>
+                            <td>Is there an up-to-date reading/resource list provided via the right-hand block, specifically created using the library’s Talis Aspire reading list system?</td>
+                            <td><input type="checkbox" name="reading_list" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>11. Embedded Specific Readings</td>
+                            <td>Have you embedded specific readings/resources from your Aspire reading list directly into the topic or week section of your main Moodle content area where appropriate?</td>
+                            <td><input type="checkbox" name="embedded_readings" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>12. Appropriate Digital Formats</td>
+                            <td>Are the digital resources provided in an appropriate format (accessibility and copyright)?</td>
+                            <td><input type="checkbox" name="digital_formats" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>13. Meaningful Text Descriptions</td>
+                            <td>Do all graphics and images have meaningful text descriptions ("alt" tags)?</td>
+                            <td><input type="checkbox" name="text_descriptions" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>14. Accessibility Requirements</td>
+                            <td>Have you ensured all accessibility requirements are met? Including text, colour usage, text alternatives for video/audio, and the use of plain English throughout.</td>
+                            <td><input type="checkbox" name="accessibility" class="completion-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>15. Accessible Learning in Advance</td>
+                            <td>Will all learning resources be provided in an accessible format at least 48 hours in advance of the session?</td>
+                            <td><input type="checkbox" name="accessible_learning" class="completion-checkbox"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const checkboxes = document.querySelectorAll('.completion-checkbox');
+        const completionPercentage = document.getElementById('completion-percentage');
+        const resetButton = document.getElementById('reset-button');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateCompletion);
+        });
+
+        resetButton.addEventListener('click', () => {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            updateCompletion();
+        });
+
+        function updateCompletion() {
+            const checked = document.querySelectorAll('.completion-checkbox:checked').length;
+            const percentage = Math.round((checked / checkboxes.length) * 100);
+            completionPercentage.textContent = `Moodle Baseline Completion Checker: ${percentage}%`;
+        }
+    </script>
+</body>
+</html>
+
